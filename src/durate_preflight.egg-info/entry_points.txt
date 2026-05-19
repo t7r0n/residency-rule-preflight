@@ -1,2 +1,0 @@
-[console_scripts]
-durate-preflight = durate_preflight.cli:main

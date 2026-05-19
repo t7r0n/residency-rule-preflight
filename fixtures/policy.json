@@ -1,0 +1,18 @@
+{
+  "company": "Durate",
+  "repo": "durate-preflight",
+  "metrics": [
+    "durate_coverage",
+    "marketing_risk",
+    "leans_precision",
+    "plain_latency"
+  ],
+  "failure_modes": [
+    "durate_drift",
+    "marketing_gap",
+    "leans_misroute",
+    "plain_blindspot"
+  ],
+  "minimum_cases": 144,
+  "requires_evidence_markers": true
+}

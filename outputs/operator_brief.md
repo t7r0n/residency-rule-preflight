@@ -1,6 +1,6 @@
 # Operator Brief: Durate
 
-Durate gets a local, deterministic pressure test around durate, marketing, and leans. The useful part is not the dashboard; it is the repeatable evidence path from fixture to failure to operator action.
+Durate gets a local, deterministic pressure test around durate, marketing, and leans. The useful part is the repeatable evidence path from fixture to failure to operator action.
 
 ## Highest-leverage checks
 

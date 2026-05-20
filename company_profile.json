@@ -40,6 +40,28 @@
     "leans_misroute",
     "plain_blindspot"
   ],
+  "archetypes": [
+    {
+      "name": "durate evidence replay",
+      "trigger": "durate signal changes while marketing context is stale",
+      "expected": "block release until cited evidence is regenerated"
+    },
+    {
+      "name": "marketing boundary probe",
+      "trigger": "marketing handoff crosses a policy or trust boundary",
+      "expected": "route to reviewer with evidence packet"
+    },
+    {
+      "name": "leans regression harness",
+      "trigger": "leans behavior regresses against the last accepted fixture",
+      "expected": "open a regression issue with trace and benchmark delta"
+    },
+    {
+      "name": "plain operator packet",
+      "trigger": "plain output needs a human-readable audit packet",
+      "expected": "accept only if decision claims cite fixture evidence"
+    }
+  ],
   "sources": [
     "https://www.crunchbase.com/organization/docflow-61f0",
     "https://www.durate.com/products/specialties/other",

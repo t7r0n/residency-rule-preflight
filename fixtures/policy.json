@@ -1,37 +1,37 @@
 {
-  "company": "Durate",
-  "repo": "durate-preflight",
+  "company": "Residency Rule Preflight",
+  "repo": "residency-rule-preflight",
   "metrics": [
-    "durate_coverage",
-    "marketing_risk",
-    "leans_precision",
-    "plain_latency"
+    "evidence_coverage",
+    "handoff_risk",
+    "claim_precision",
+    "review_latency"
   ],
   "failure_modes": [
-    "durate_drift",
-    "marketing_gap",
-    "leans_misroute",
-    "plain_blindspot"
+    "evidence_drift",
+    "handoff_gap",
+    "claim_misroute",
+    "review_blindspot"
   ],
   "domain_archetypes": [
     {
-      "name": "durate evidence replay",
-      "trigger": "durate signal changes while marketing context is stale",
+      "name": "evidence replay",
+      "trigger": "source evidence changes while workflow context is stale",
       "expected": "block release until cited evidence is regenerated"
     },
     {
-      "name": "marketing boundary probe",
-      "trigger": "marketing handoff crosses a policy or trust boundary",
+      "name": "handoff boundary probe",
+      "trigger": "handoff crosses a policy or trust boundary",
       "expected": "route to reviewer with evidence packet"
     },
     {
-      "name": "leans regression harness",
-      "trigger": "leans behavior regresses against the last accepted fixture",
+      "name": "claim regression harness",
+      "trigger": "claim behavior regresses against the last accepted fixture",
       "expected": "open a regression issue with trace and benchmark delta"
     },
     {
-      "name": "plain operator packet",
-      "trigger": "plain output needs a human-readable audit packet",
+      "name": "review operator packet",
+      "trigger": "review output needs a human-readable audit packet",
       "expected": "accept only if decision claims cite fixture evidence"
     }
   ],

@@ -1,78 +1,61 @@
 {
-  "company": "Durate",
-  "company_slug": "durate",
-  "repo": "durate-preflight",
-  "package": "durate_preflight",
-  "cli": "durate-preflight",
-  "title": "Durate Preflight",
-  "problem": "Durate's marketing leans on \"plain English\" rule configuration (YC profile). For residency programs the rule set is non trivial: the ACGME Common Program Requirements for Residency 2025 (acgme.org) defines specific maximum hour rules (80h/wk averaged over 4 weeks, 24+4 max continuous, 14h off after 24, 1 in 7 free, in house call no more frequent than every third night), and each specialty layers further requirements.",
-  "direction": "A compliance pre flight layer for Durate that converts plain English rules into typed constraints, statically proves every published schedule against the ACGME Common Program Requirements + specialty supplements, and produces an auditor ready PDF showing exactly which rule check passed which clause.",
-  "why": "Each new specialty's.yaml is a sales asset, not just code. After 20 specialties, switching off Durate is a six month migration. It fingerprint matches Mounajjed's family context (his mother runs a residency program - she would literally be the design partner persona ).",
+  "company": "Residency Rule Preflight",
+  "company_slug": "residency-rule-preflight",
+  "repo": "residency-rule-preflight",
+  "package": "residency_rule_preflight",
+  "cli": "residency-rule-preflight",
+  "title": "Residency Rule Preflight",
+  "problem": "Residency Rule Preflight's marketing leans on \"plain English\" rule configuration (YC profile). For residency programs the rule set is non trivial: the ACGME Common Program Requirements for Residency 2025 () defines specific maximum hour rules (80h/wk averaged over 4 weeks, 24+4 max continuous, 14h off after 24, 1 in 7 free, in house call no more frequent than every third night), and each specialty layers further requirements.",
+  "direction": "A compliance pre flight layer for Residency Rule Preflight that converts plain English rules into typed constraints, statically proves every published schedule against the ACGME Common Program Requirements + specialty supplements, and produces an auditor ready PDF showing exactly which rule check passed which clause.",
+  "why": "This repository is intentionally project-branded rather than company-branded. It focuses on deterministic replay, source-grounded analysis, and reviewer-visible evidence paths.",
   "terms": [
-    "durate",
-    "marketing",
-    "leans",
-    "plain",
-    "english",
-    "configuration",
-    "profile",
-    "residency",
-    "programs",
-    "trivial",
-    "acgme",
-    "common",
-    "program",
-    "requirements",
-    "defines",
-    "specific",
-    "maximum",
-    "rules"
+    "evidence",
+    "workflow",
+    "review",
+    "claims",
+    "fixtures",
+    "replay",
+    "handoff",
+    "trace",
+    "policy",
+    "decision",
+    "coverage",
+    "latency"
   ],
   "metrics": [
-    "durate_coverage",
-    "marketing_risk",
-    "leans_precision",
-    "plain_latency"
+    "evidence_coverage",
+    "handoff_risk",
+    "claim_precision",
+    "review_latency"
   ],
   "failure_modes": [
-    "durate_drift",
-    "marketing_gap",
-    "leans_misroute",
-    "plain_blindspot"
+    "evidence_drift",
+    "handoff_gap",
+    "claim_misroute",
+    "review_blindspot"
   ],
   "archetypes": [
     {
-      "name": "durate evidence replay",
-      "trigger": "durate signal changes while marketing context is stale",
+      "name": "evidence replay",
+      "trigger": "source evidence changes while workflow context is stale",
       "expected": "block release until cited evidence is regenerated"
     },
     {
-      "name": "marketing boundary probe",
-      "trigger": "marketing handoff crosses a policy or trust boundary",
+      "name": "handoff boundary probe",
+      "trigger": "handoff crosses a policy or trust boundary",
       "expected": "route to reviewer with evidence packet"
     },
     {
-      "name": "leans regression harness",
-      "trigger": "leans behavior regresses against the last accepted fixture",
+      "name": "claim regression harness",
+      "trigger": "claim behavior regresses against the last accepted fixture",
       "expected": "open a regression issue with trace and benchmark delta"
     },
     {
-      "name": "plain operator packet",
-      "trigger": "plain output needs a human-readable audit packet",
+      "name": "review operator packet",
+      "trigger": "review output needs a human-readable audit packet",
       "expected": "accept only if decision claims cite fixture evidence"
     }
   ],
-  "sources": [
-    "https://www.crunchbase.com/organization/docflow-61f0",
-    "https://www.durate.com/products/specialties/other",
-    "https://bem.durate.com/",
-    "https://foundertrace.com/companies/durate_yc_f24/",
-    "https://www.linkedin.com/posts/michael-mounajjed_excited-to-say-ben-liu-and-i-have-left-rice-activity-7261425844105994241-7hMX",
-    "https://www.acgme.org/globalassets/pfassets/programrequirements/2025-reformatted-requirements/cprresidency_2025_reformatted.pdf",
-    "https://pmc.ncbi.nlm.nih.gov/articles/PMC4304277/",
-    "https://pmc.ncbi.nlm.nih.gov/articles/PMC10790185/",
-    "https://www.bidmcharvardpsychiatry.org/residentlife/callschedule.html",
-    "https://github.com/Z3Prover/z3"
-  ],
-  "github_url": "https://github.com/t7r0n/durate-preflight"
+  "sources": [],
+  "github_url": "https://github.com/t7r0n/residency-rule-preflight"
 }

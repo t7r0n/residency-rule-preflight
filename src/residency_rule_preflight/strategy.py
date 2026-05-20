@@ -6,15 +6,15 @@ from pathlib import Path
 from typing import Any
 
 
-COMPANY = 'Durate'
-REPO = 'durate-preflight'
-PROJECT_TERMS = ['durate', 'marketing', 'leans', 'plain', 'english', 'configuration', 'profile', 'residency']
-PROJECT_METRICS = ['durate_coverage', 'marketing_risk', 'leans_precision', 'plain_latency']
-PROJECT_FAILURES = ['durate_drift', 'marketing_gap', 'leans_misroute', 'plain_blindspot']
-PROJECT_ARCHETYPES = [{'name': 'durate evidence replay', 'trigger': 'durate signal changes while marketing context is stale', 'expected': 'block release until cited evidence is regenerated'}, {'name': 'marketing boundary probe', 'trigger': 'marketing handoff crosses a policy or trust boundary', 'expected': 'route to reviewer with evidence packet'}, {'name': 'leans regression harness', 'trigger': 'leans behavior regresses against the last accepted fixture', 'expected': 'open a regression issue with trace and benchmark delta'}, {'name': 'plain operator packet', 'trigger': 'plain output needs a human-readable audit packet', 'expected': 'accept only if decision claims cite fixture evidence'}]
-PROJECT_DIRECTION = 'A compliance pre flight layer for Durate that converts plain English rules into typed constraints, statically proves every published schedule against the ACGME Common Program Requirements + specialty supplements, and produces an auditor ready PDF showing exactly which rule check passed which clause.'
+COMPANY = 'Residency Rule Preflight'
+REPO = 'residency-rule-preflight'
+PROJECT_TERMS = ['evidence', 'workflow', 'review', 'claims', 'fixtures', 'replay', 'handoff', 'trace', 'policy', 'decision', 'coverage', 'latency']
+PROJECT_METRICS = ['evidence_coverage', 'handoff_risk', 'claim_precision', 'review_latency']
+PROJECT_FAILURES = ['evidence_drift', 'handoff_gap', 'claim_misroute', 'review_blindspot']
+PROJECT_ARCHETYPES = [{'name': 'evidence replay', 'trigger': 'source evidence changes while workflow context is stale', 'expected': 'block release until cited evidence is regenerated'}, {'name': 'handoff boundary probe', 'trigger': 'handoff crosses a policy or trust boundary', 'expected': 'route to reviewer with evidence packet'}, {'name': 'claim regression harness', 'trigger': 'claim behavior regresses against the last accepted fixture', 'expected': 'open a regression issue with trace and benchmark delta'}, {'name': 'review operator packet', 'trigger': 'review output needs a human-readable audit packet', 'expected': 'accept only if decision claims cite fixture evidence'}]
+PROJECT_DIRECTION = 'A compliance pre flight layer for Residency Rule Preflight that converts plain English rules into typed constraints, statically proves every published schedule against the ACGME Common Program Requirements + specialty supplements, and produces an auditor ready PDF showing exactly which rule check passed which clause.'
 VISUAL_THEME = {'name': 'clinical ops', 'bg': '#f7faf9', 'ink': '#10201c', 'muted': '#475569', 'border': '#d7e2df', 'a': '#0f766e', 'b': '#4f46e5', 'c': '#b45309', 'd': '#2563eb', 'soft_a': '#ecfdf5', 'soft_b': '#eef2ff', 'soft_c': '#fffbeb', 'soft_d': '#f0f9ff', 'hero': 'Evidence Triage Board', 'left': 'operational gates under review', 'right': 'review packets with citations', 'chain': 'evidence-to-decision chain', 'lane': 'case lane', 'gate': 'failure gate', 'action': 'clinical action'}
-HERO_TITLE = 'Durate Evidence Triage Board'
+HERO_TITLE = 'Residency Rule Preflight'
 
 
 def _short(value: str, limit: int = 44) -> str:
@@ -107,7 +107,7 @@ def build_signal_model(rows: list[dict[str, Any]], clusters: list[dict[str, Any]
         "review_share": round(review / total, 4),
         "top_leverage_points": leverage,
         "readout": (
-            f"{COMPANY} gets a local, deterministic pressure test around "
+            "This local harness runs a deterministic pressure test around "
             f"{PROJECT_TERMS[0]}, {PROJECT_TERMS[1]}, and {PROJECT_TERMS[2]}. "
             "The useful part is the repeatable evidence path from fixture "
             "to failure to operator action."

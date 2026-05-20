@@ -1,7 +1,7 @@
 [project]
-name = "durate-preflight"
+name = "residency-rule-preflight"
 version = "0.1.0"
-description = "A compliance pre flight layer for Durate that converts plain English rules into typed constraints, statically proves every published schedul"
+description = "A compliance pre flight layer for Residency Rule Preflight that converts plain English rules into typed constraints, sta"
 readme = "README.md"
 requires-python = ">=3.12"
 authors = [
@@ -10,7 +10,7 @@ authors = [
 dependencies = []
 
 [project.scripts]
-durate-preflight = "durate_preflight.cli:main"
+residency-rule-preflight = "residency_rule_preflight.cli:main"
 
 [dependency-groups]
 dev = [

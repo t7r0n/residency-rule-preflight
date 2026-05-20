@@ -1,68 +1,57 @@
 {
-  "repo": "durate-preflight",
-  "company": "Durate",
+  "repo": "residency-rule-preflight",
+  "company": "Residency Rule Preflight",
   "rubric_axes": [
     {
-      "axis": "durate_coverage",
+      "axis": "evidence_coverage",
       "failures": [
-        "durate_drift"
+        "evidence_drift"
       ],
       "evidence_required": true
     },
     {
-      "axis": "marketing_risk",
+      "axis": "handoff_risk",
       "failures": [
-        "marketing_gap"
+        "handoff_gap"
       ],
       "evidence_required": true
     },
     {
-      "axis": "leans_precision",
+      "axis": "claim_precision",
       "failures": [
-        "leans_misroute"
+        "claim_misroute"
       ],
       "evidence_required": true
     },
     {
-      "axis": "plain_latency",
+      "axis": "review_latency",
       "failures": [
-        "plain_blindspot"
+        "review_blindspot"
       ],
       "evidence_required": true
     }
   ],
   "archetypes": [
     {
-      "name": "durate evidence replay",
-      "trigger": "durate signal changes while marketing context is stale",
+      "name": "evidence replay",
+      "trigger": "source evidence changes while workflow context is stale",
       "expected": "block release until cited evidence is regenerated"
     },
     {
-      "name": "marketing boundary probe",
-      "trigger": "marketing handoff crosses a policy or trust boundary",
+      "name": "handoff boundary probe",
+      "trigger": "handoff crosses a policy or trust boundary",
       "expected": "route to reviewer with evidence packet"
     },
     {
-      "name": "leans regression harness",
-      "trigger": "leans behavior regresses against the last accepted fixture",
+      "name": "claim regression harness",
+      "trigger": "claim behavior regresses against the last accepted fixture",
       "expected": "open a regression issue with trace and benchmark delta"
     },
     {
-      "name": "plain operator packet",
-      "trigger": "plain output needs a human-readable audit packet",
+      "name": "review operator packet",
+      "trigger": "review output needs a human-readable audit packet",
       "expected": "accept only if decision claims cite fixture evidence"
     }
   ],
-  "sources_used": [
-    "https://www.crunchbase.com/organization/docflow-61f0",
-    "https://www.durate.com/products/specialties/other",
-    "https://bem.durate.com/",
-    "https://foundertrace.com/companies/durate_yc_f24/",
-    "https://www.linkedin.com/posts/michael-mounajjed_excited-to-say-ben-liu-and-i-have-left-rice-activity-7261425844105994241-7hMX",
-    "https://www.acgme.org/globalassets/pfassets/programrequirements/2025-reformatted-requirements/cprresidency_2025_reformatted.pdf",
-    "https://pmc.ncbi.nlm.nih.gov/articles/PMC4304277/",
-    "https://pmc.ncbi.nlm.nih.gov/articles/PMC10790185/",
-    "https://www.bidmcharvardpsychiatry.org/residentlife/callschedule.html",
-    "https://github.com/Z3Prover/z3"
-  ]
+  "sources_used": []
 }

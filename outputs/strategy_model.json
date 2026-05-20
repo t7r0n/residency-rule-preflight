@@ -1,0 +1,69 @@
+{
+  "company": "Durate",
+  "repo": "durate-preflight",
+  "terms": [
+    "durate",
+    "marketing",
+    "leans",
+    "plain",
+    "english",
+    "configuration",
+    "profile",
+    "residency"
+  ],
+  "metrics": [
+    "durate_coverage",
+    "marketing_risk",
+    "leans_precision",
+    "plain_latency"
+  ],
+  "failure_modes": [
+    "durate_drift",
+    "marketing_gap",
+    "leans_misroute",
+    "plain_blindspot"
+  ],
+  "evidence_density": 17.75,
+  "pressure_index": 0.3167,
+  "blocked_share": 0.0972,
+  "review_share": 0.1319,
+  "top_leverage_points": [
+    {
+      "rank": 1,
+      "scenario": "durate evidence replay",
+      "metric": "durate_coverage",
+      "failure_mode": "durate_drift",
+      "evidence": "ev_0088",
+      "operator_action": "block release until cited evidence is regenerated",
+      "severity": 2.611
+    },
+    {
+      "rank": 2,
+      "scenario": "plain operator packet",
+      "metric": "marketing_risk",
+      "failure_mode": "marketing_gap",
+      "evidence": "ev_0099",
+      "operator_action": "accept only if decision claims cite fixture evidence",
+      "severity": 2.556
+    },
+    {
+      "rank": 3,
+      "scenario": "leans regression harness",
+      "metric": "leans_precision",
+      "failure_mode": "leans_misroute",
+      "evidence": "ev_0110",
+      "operator_action": "open a regression issue with trace and benchmark delta",
+      "severity": 2.528
+    },
+    {
+      "rank": 4,
+      "scenario": "marketing boundary probe",
+      "metric": "plain_latency",
+      "failure_mode": "plain_blindspot",
+      "evidence": "ev_0077",
+      "operator_action": "route to reviewer with evidence packet",
+      "severity": 2.528
+    }
+  ],
+  "readout": "Durate gets a local, deterministic pressure test around durate, marketing, and leans. The useful part is not the dashboard; it is the repeatable evidence path from fixture to failure to operator action."
+}

@@ -1,0 +1,59 @@
+{
+  "layers": [
+    {
+      "name": "synthetic_fixture_replay",
+      "purpose": "exercise durate and marketing cases"
+    },
+    {
+      "name": "domain_strategy",
+      "purpose": "score durate_coverage and marketing_risk"
+    },
+    {
+      "name": "evidence_lock",
+      "purpose": "reject narrative claims without fixture evidence IDs"
+    },
+    {
+      "name": "operator_packet",
+      "purpose": "emit dashboard, SVG readout, CSV, markdown report, and demo pack"
+    }
+  ],
+  "pressure_index": 0.3167,
+  "top_leverage_points": [
+    {
+      "rank": 1,
+      "scenario": "durate evidence replay",
+      "metric": "durate_coverage",
+      "failure_mode": "durate_drift",
+      "evidence": "ev_0088",
+      "operator_action": "block release until cited evidence is regenerated",
+      "severity": 2.611
+    },
+    {
+      "rank": 2,
+      "scenario": "plain operator packet",
+      "metric": "marketing_risk",
+      "failure_mode": "marketing_gap",
+      "evidence": "ev_0099",
+      "operator_action": "accept only if decision claims cite fixture evidence",
+      "severity": 2.556
+    },
+    {
+      "rank": 3,
+      "scenario": "leans regression harness",
+      "metric": "leans_precision",
+      "failure_mode": "leans_misroute",
+      "evidence": "ev_0110",
+      "operator_action": "open a regression issue with trace and benchmark delta",
+      "severity": 2.528
+    },
+    {
+      "rank": 4,
+      "scenario": "marketing boundary probe",
+      "metric": "plain_latency",
+      "failure_mode": "plain_blindspot",
+      "evidence": "ev_0077",
+      "operator_action": "route to reviewer with evidence packet",
+      "severity": 2.528
+    }
+  ]
+}
